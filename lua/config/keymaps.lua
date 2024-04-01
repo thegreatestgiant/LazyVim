@@ -4,6 +4,9 @@ M.general = {
   n = {
     ["<tab>"] = { "<cmd>bnext<cr>", "Next Buffer" },
     ["<S-tab>"] = { "<cmd>bprevious<cr>", "Prev Buffer" },
+
+    -- Vim REST Console
+    ["<leader>rc"] = { "<cmd>call VrcQuery()<CR>", "Run REST Query" },
   },
 }
 
