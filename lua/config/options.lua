@@ -5,3 +5,5 @@
 vim.wo.number = true
 vim.wo.relativenumber = true
 vim.opt.whichwrap:append("[]<>hl")
+
+vim.cmd.colorscheme("catppuccin")
