@@ -1,3 +1,21 @@
--- Keymaps are automatically loaded on the VeryLazy event
--- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
--- Add any additional keymaps here
+local M = {}
+
+M.general = {
+  n = {
+    ["<tab>"] = { "<cmd>bnext<cr>", "Next Buffer" },
+    ["<S-tab>"] = { "<cmd>bprevious<cr>", "Prev Buffer" },
+  },
+}
+
+M.neo_tree = {
+  n = {
+    ["<C-n>"] = {
+      function()
+        require("neo-tree.command").execute({ toggle = true, dir = LazyVim.root() })
+      end,
+      "Explorer NeoTree (cwd)",
+    },
+  },
+}
+
+return M
